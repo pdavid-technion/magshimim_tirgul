@@ -18,11 +18,25 @@ enum DeviceType {PHONE, PC, LAPTOP, TABLET};		     //
 #define ANDROID "Android"                                //
 													     //
 /// ///////////////////////////////////////////////////////
-
+#include <string>
 
 class Device
 {
+private:
+	unsigned int _id;
+	DeviceType _device_type;
+	std::string _os;
+	bool _is_active;
 
+public:
+	void init(unsigned int id, DeviceType device_type, std::string os);
+	~Device();
+	unsigned int getId() const;
+	DeviceType getType() const;
+	std::string getOS() const;
+	bool isActive() const;
+	void activate();
+	void deactivate();
 
 };
 
