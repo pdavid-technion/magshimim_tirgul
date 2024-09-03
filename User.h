@@ -8,12 +8,12 @@ class User
         unsigned int getID();
         std::string getUserName();
         unsigned int getAge();
-        DeviceList& getDevices();
+        DevicesList& getDevices();
         void addDevice(Device newDevice);
         bool checkIfDevicesAreOn();
     private:
         unsigned int id;
         std::string username;
         unsigned int age;
-        DeviceList list;
-}
+        DevicesList list;
+};
